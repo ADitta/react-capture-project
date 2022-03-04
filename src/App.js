@@ -9,6 +9,7 @@ import MovieDetail from "./pages/MovieDetail";
 import { Route, Routes, useLocation } from "react-router-dom";
 // Animation
 import { AnimatePresence } from "framer-motion";
+
 // GLobal Style
 function App() {
   const location = useLocation();
@@ -16,7 +17,12 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence
+        exitBeforeEnter
+        onExitComplete={() => {
+          window.scrollTo(0, 0);
+        }}
+      >
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<AboutUs />} />
           <Route path="/work" element={<OurWork />} />
