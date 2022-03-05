@@ -9,55 +9,62 @@ import { useScroll } from "./useScroll";
 import { scrollReveal } from "../animation";
 
 // Styles
-import { StyledDescription, StyledAbout, StyledImage } from "../styles";
+import {
+  StyledDescription,
+  StyledAbout,
+  StyledImage,
+  StyledHide,
+} from "../styles";
 const ServicesSection = () => {
   const [element, controls] = useScroll();
   return (
-    <StyledServices
-      variants={scrollReveal}
-      animate={controls}
-      initial="hidden"
-      ref={element}
-    >
-      <StyledDescription>
-        <h2>
-          High <span>quality</span> services
-        </h2>
-        <StyledCards>
-          <StyledCard>
-            <div className="icon">
-              <img src={clock} alt="icon" />
-              <h3>Efficient</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </StyledCard>
-          <StyledCard>
-            <div className="icon">
-              <img src={teamwork} alt="icon" />
-              <h3>Teamwork</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </StyledCard>
-          <StyledCard>
-            <div className="icon">
-              <img src={diaphragm} alt="icon" />
-              <h3>Diaphragm</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </StyledCard>
-          <StyledCard>
-            <div className="icon">
-              <img src={money} alt="icon" />
-              <h3>Affordable</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </StyledCard>
-        </StyledCards>
-      </StyledDescription>
-      <StyledImage>
-        <img src={home2} alt="camera" />
-      </StyledImage>
-    </StyledServices>
+    <StyledHide>
+      <StyledServices
+        variants={scrollReveal}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
+        <StyledDescription>
+          <h2>
+            High <span>quality</span> services
+          </h2>
+          <StyledCards>
+            <StyledCard>
+              <div className="icon">
+                <img src={clock} alt="icon" />
+                <h3>Efficient</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </StyledCard>
+            <StyledCard>
+              <div className="icon">
+                <img src={teamwork} alt="icon" />
+                <h3>Teamwork</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </StyledCard>
+            <StyledCard>
+              <div className="icon">
+                <img src={diaphragm} alt="icon" />
+                <h3>Diaphragm</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </StyledCard>
+            <StyledCard>
+              <div className="icon">
+                <img src={money} alt="icon" />
+                <h3>Affordable</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </StyledCard>
+          </StyledCards>
+        </StyledDescription>
+        <StyledImage>
+          <img src={home2} alt="camera" />
+        </StyledImage>
+      </StyledServices>
+    </StyledHide>
   );
 };
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledAbout } from "../styles";
+import { StyledAbout, StyledHide } from "../styles";
 import Toggle from "./Toggle";
 import { AnimateSharedLayout } from "framer-motion";
 import { useScroll } from "./useScroll";
@@ -8,54 +8,56 @@ import { scrollReveal } from "../animation";
 const FaqSection = () => {
   const [element, controls] = useScroll();
   return (
-    <StyledFaq
-      variants={scrollReveal}
-      ref={element}
-      animate={controls}
-      initial="hidden"
-    >
-      <h2>
-        Any Questions? <span>FAQ</span>
-      </h2>
-      <AnimateSharedLayout>
-        <Toggle title="How do I start?">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, tempore!
-            </p>
-          </div>
-        </Toggle>
-        <Toggle title="Daily Schedule">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, tempore!
-            </p>
-          </div>
-        </Toggle>
-        <Toggle title="Different Payment Methods">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, tempore!
-            </p>
-          </div>
-        </Toggle>
-        <Toggle title="What products do you offer?">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, tempore!
-            </p>
-          </div>
-        </Toggle>
-      </AnimateSharedLayout>
-    </StyledFaq>
+    <StyledHide>
+      <StyledFaq
+        variants={scrollReveal}
+        ref={element}
+        animate={controls}
+        initial="hidden"
+      >
+        <h2>
+          Any Questions? <span>FAQ</span>
+        </h2>
+        <AnimateSharedLayout>
+          <Toggle title="How do I start?">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae, tempore!
+              </p>
+            </div>
+          </Toggle>
+          <Toggle title="Daily Schedule">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae, tempore!
+              </p>
+            </div>
+          </Toggle>
+          <Toggle title="Different Payment Methods">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae, tempore!
+              </p>
+            </div>
+          </Toggle>
+          <Toggle title="What products do you offer?">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae, tempore!
+              </p>
+            </div>
+          </Toggle>
+        </AnimateSharedLayout>
+      </StyledFaq>
+    </StyledHide>
   );
 };
 

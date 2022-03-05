@@ -74,6 +74,11 @@ const StyledHeadLine = styled.div`
       font-size: 3rem;
     }
   }
+  @media (max-width: 415px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+  } ;
 `;
 
 const StyledAwards = styled.div`

@@ -9,12 +9,12 @@ import MovieDetail from "./pages/MovieDetail";
 import { Route, Routes, useLocation } from "react-router-dom";
 // Animation
 import { AnimatePresence } from "framer-motion";
-
+import { StyledHide } from "./styles";
 // GLobal Style
 function App() {
   const location = useLocation();
   return (
-    <div className="App">
+    <StyledHide>
       <GlobalStyle />
       <Nav />
       <AnimatePresence
@@ -30,7 +30,7 @@ function App() {
           <Route path="/contact" exact element={<ContactUs />} />
         </Routes>
       </AnimatePresence>
-    </div>
+    </StyledHide>
   );
 }
 

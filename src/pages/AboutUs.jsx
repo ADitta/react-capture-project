@@ -7,7 +7,7 @@ import ServicesSection from "../components/ServicesSection";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 import ScrollTop from "../components/ScrollTop";
-
+import { StyledHide } from "../styles";
 const AboutUs = () => {
   return (
     <motion.div
