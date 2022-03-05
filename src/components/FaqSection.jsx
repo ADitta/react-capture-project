@@ -77,6 +77,16 @@ const StyledFaq = styled(StyledAbout)`
   .question {
     padding: 3rem 0rem;
     cursor: pointer;
+    transition: color 0.5s ease-in-out;
+    &:hover {
+      color: #23d997;
+    }
+  }
+  .active {
+    color: #23d997;
+    &:hover {
+      color: white;
+    }
   }
   .answer {
     padding: 2rem 0rem;

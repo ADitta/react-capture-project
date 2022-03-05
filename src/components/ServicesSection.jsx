@@ -81,15 +81,22 @@ const StyledCards = styled.div`
 
 const StyledCard = styled.div`
   flex-basis: 20rem;
+
   .icon {
     display: flex;
     align-items: center;
+    &:hover {
+      h3 {
+        background-color: #23d997;
+      }
+    }
     h3 {
       margin-left: 1rem;
       background-color: white;
       color: black;
       padding: 1rem;
       border-radius: 1rem;
+      transition: all 0.5s ease-in-out;
     }
   }
 `;
