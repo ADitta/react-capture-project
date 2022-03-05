@@ -8,6 +8,10 @@
 
 - https://asim-capture-project.netlify.app/
 
+# ToDo
+
+- style and add content to the contact us page
+
 # How to run this project locally
 
 ## Minimum requirements:
