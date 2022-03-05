@@ -7,6 +7,9 @@
 # Hosted Link
 
 - https://asim-capture-project.netlify.app/
+# About 
+
+- This website was developed with React, Styled components and Framer Motion
 
 # ToDo
 
